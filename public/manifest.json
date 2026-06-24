@@ -1,0 +1,38 @@
+{
+  "name": "Just Burger",
+  "short_name": "Just Burger",
+  "description": "Burger artigianali premium. Il Gusto Non Mente.",
+  "start_url": "/app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#131313",
+  "theme_color": "#131313",
+  "orientation": "portrait-primary",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "/images/just-burger-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/just-burger-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Menu",
+      "url": "/app/menu",
+      "description": "Sfoglia il menu Just Burger"
+    },
+    {
+      "name": "Ristoranti",
+      "url": "/app/ristoranti",
+      "description": "Trova il locale più vicino"
+    }
+  ]
+}
