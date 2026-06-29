@@ -48,7 +48,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Doppio hamburger di manzo frollato a secco, maionese al tartufo nero, gouda affumicato, anelli di cipolla croccanti, pan brioche fatto in casa.',
     price: '€18',
-    image: '/images/burger-truffle.jpg',
+    image: '/images/il-truffle-burn.png',
     category: 'burger',
     badge: { label: 'Speciale', variant: 'spicy' },
     chef: true,
@@ -59,7 +59,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Pollo fritto croccante al latticello, olio al peperoncino piccante, sottaceti all\'aneto spessi, insalata di cavolo ranch fresca.',
     price: '€16',
-    image: '/images/burger-nashville.jpg',
+    image: '/images/nashville-piccante.png',
     category: 'burger',
     badge: { label: 'Più Amato', variant: 'spicy' },
     chef: true,
@@ -70,7 +70,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Due polpette schiacciate, formaggio americano, cipolle caramellate, sottaceti della casa, salsa speciale.',
     price: '€14',
-    image: '/images/burger-smash.jpg',
+    image: '/images/smash-classico.png',
     category: 'burger',
     badge: { label: 'Allevato ad Erba', variant: 'neutral' },
   },
@@ -80,7 +80,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Hamburger di fagioli neri e quinoa fatto in casa, peperoni rossi arrostiti, rucola selvatica, aioli all\'aglio vegano.',
     price: '€15',
-    image: '/images/burger-earth.jpg',
+    image: '/images/earth-burger.png',
     category: 'burger',
     badge: { label: 'Vegetariano', variant: 'sage' },
   },
@@ -90,7 +90,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Hamburger speziato, formaggio pepper jack, pancetta affumicata, jalapeños freschi e salsa chipotle.',
     price: '€15',
-    image: '/images/burger-fire.jpg',
+    image: '/images/fuoco-e-fiamme.png',
     category: 'burger',
     badge: { label: 'Piccante', variant: 'spicy' },
   },
@@ -100,7 +100,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Hamburger di manzo dal taglio spesso premium, funghi selvatici arrostiti, fontina e crema al tartufo.',
     price: '€16.50',
-    image: '/images/burger-mushroom.jpg',
+    image: '/images/dove-tutto-ha-avuto-inizio.png',
     category: 'burger',
   },
   {
@@ -109,7 +109,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Patatine fresche tagliate a mano, fonduta di cheddar, pancetta croccante, erba cipollina e olio al tartufo.',
     price: '€6',
-    image: '/images/fries.jpg',
+    image: '/images/loaded-truffle-fries.png',
     category: 'contorni',
     badge: { label: 'Da Condividere', variant: 'neutral' },
   },
@@ -119,7 +119,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Anelli di cipolla dorati in pastella alla birra artigianale, serviti con salsa ranch affumicata.',
     price: '€5.50',
-    image: '/images/onion-rings.jpg',
+    image: '/images/onion-rings.png',
     category: 'contorni',
   },
   {
@@ -128,7 +128,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'La nostra cola alla spina fatta in casa con zucchero di canna e spezie naturali.',
     price: '€4',
-    image: '/images/cola.jpg',
+    image: '/images/cola-artigianale.png',
     category: 'drink',
   },
   {
@@ -137,7 +137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Cremoso milkshake al gelato artigianale alla vaniglia del Madagascar, panna montata e caramello salato.',
     price: '€6.50',
-    image: '/images/milkshake.jpg',
+    image: '/images/milkshake-vaniglia.png',
     category: 'drink',
     badge: { label: 'Bio', variant: 'sage' },
   },
@@ -147,7 +147,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Brownie al cioccolato fondente 70%, cuore morbido, gelato alla vaniglia e granella di nocciole.',
     price: '€7',
-    image: '/images/brownie.jpg',
+    image: '/images/brownie-fondente.png',
     category: 'dessert',
   },
   {
@@ -156,7 +156,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Cheesecake newyorkese cremosa con coulis di frutti di bosco freschi e base di biscotto al burro.',
     price: '€7',
-    image: '/images/cheesecake.jpg',
+    image: '/images/cheesecake-frutti-rossi.png',
     category: 'dessert',
   },
 ]

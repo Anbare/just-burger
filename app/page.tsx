@@ -96,7 +96,7 @@ export default function HomePage() {
               strength={36}
             >
               <DishImage
-                src="/images/chef.jpg"
+                src="/images/dove-tutto-ha-avuto-inizio.png"
                 alt="I nostri chef preparano un burger artigianale"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

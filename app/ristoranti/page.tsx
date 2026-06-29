@@ -41,23 +41,22 @@ export default function RistorantiPage() {
           <StaggerGroup className="grid gap-6 md:grid-cols-3">
             {LOCATIONS.map((loc) => (
               <StaggerItem key={loc.id}>
-                <div className="relative h-full rounded-2xl border border-border bg-card p-6">
-                  <div className="absolute right-5 top-5">
+                <div className="h-full rounded-2xl border border-border bg-card p-6">
+                  <div className="flex items-start justify-between gap-3">
+                    <h2 className="font-heading text-xl font-semibold">
+                      {loc.name}
+                    </h2>
                     {loc.comingSoon ? (
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary border border-primary/30">
+                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary border border-primary/30">
                         Prossima Apertura
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-sage text-sage-foreground px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
+                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-sage text-sage-foreground px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
                         <Leaf className="h-3 w-3" aria-hidden />
                         Aperto
                       </span>
                     )}
                   </div>
-
-                  <h2 className="font-heading text-xl font-semibold pr-20">
-                    {loc.name}
-                  </h2>
 
                   <div className="mt-5 space-y-3 text-sm text-foreground/90">
                     <div className="flex items-start gap-2">
