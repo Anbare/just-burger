@@ -87,7 +87,7 @@ export function Hero() {
                 <span key={w} className="mr-[0.25em] inline-block overflow-hidden align-bottom">
                   <motion.span
                     variants={word}
-                    className="inline-block italic text-primary"
+                    className="inline-block italic text-primary pr-[0.12em]"
                   >
                     {w}
                   </motion.span>

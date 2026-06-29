@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { MapPin, Phone } from 'lucide-react'
+import { Leaf, MapPin, Phone } from 'lucide-react'
 import { Reveal, StaggerGroup, StaggerItem } from '@/components/motion-primitives'
-import { DishBadge } from '@/components/dish-badge'
 import { LOCATIONS } from '@/lib/site-data'
 
 export const metadata: Metadata = {
   title: 'I Nostri Locali — Just Burger',
   description:
-    'Tre indirizzi in Italia, un\'unica ossessione per la qualità. Trova il Just Burger più vicino a te: Napoli, Roma, Milano.',
+    'Quattro indirizzi in Italia, un\'unica ossessione per la qualità. Trova il Just Burger più vicino a te: Napoli, Roma, Milano, Firenze.',
 }
 
 export default function RistorantiPage() {
@@ -20,7 +19,7 @@ export default function RistorantiPage() {
         <div className="relative z-10 mx-auto w-full max-w-3xl px-4 pt-24 text-center md:px-10">
           <Reveal>
             <span className="inline-flex items-center rounded-full bg-sage px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-sage-foreground">
-              3 Locali in Italia
+              4 Locali in Italia
             </span>
           </Reveal>
           <Reveal delay={0.05}>
@@ -44,7 +43,16 @@ export default function RistorantiPage() {
               <StaggerItem key={loc.id}>
                 <div className="relative h-full rounded-2xl border border-border bg-card p-6">
                   <div className="absolute right-5 top-5">
-                    <DishBadge badge={{ label: 'Aperto', variant: 'sage' }} />
+                    {loc.comingSoon ? (
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary border border-primary/30">
+                        Prossima Apertura
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-sage text-sage-foreground px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
+                        <Leaf className="h-3 w-3" aria-hidden />
+                        Aperto
+                      </span>
+                    )}
                   </div>
 
                   <h2 className="font-heading text-xl font-semibold pr-20">
@@ -74,16 +82,22 @@ export default function RistorantiPage() {
                     <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
                       Orari
                     </p>
-                    <table className="w-full text-sm">
-                      <tbody>
-                        {loc.hours.map((h) => (
-                          <tr key={h.days}>
-                            <td className="py-0.5 text-foreground/80">{h.days}</td>
-                            <td className="py-0.5 text-right text-muted-foreground">{h.time}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                    {loc.comingSoon ? (
+                      <p className="text-sm text-muted-foreground italic">
+                        Apertura prevista prossimamente
+                      </p>
+                    ) : (
+                      <table className="w-full text-sm">
+                        <tbody>
+                          {loc.hours.map((h) => (
+                            <tr key={h.days}>
+                              <td className="py-0.5 text-foreground/80">{h.days}</td>
+                              <td className="py-0.5 text-right text-muted-foreground">{h.time}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
                   </div>
                 </div>
               </StaggerItem>

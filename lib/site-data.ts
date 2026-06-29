@@ -22,6 +22,7 @@ export type Location = {
   zip: string
   phone: string
   hours: { days: string; time: string }[]
+  comingSoon?: boolean
 }
 
 export const NAV_LINKS = [
@@ -204,6 +205,18 @@ export const LOCATIONS: Location[] = [
       { days: 'Domenica', time: '12:00 – 21:00' },
     ],
   },
+  {
+    id: 'firenze',
+    city: 'Firenze',
+    name: 'Just Burger Firenze',
+    address: 'Via de\' Tornabuoni, 18',
+    zip: '50123 Firenze, FI',
+    phone: '+39 055 234 5678',
+    hours: [
+      { days: 'Lun – Dom', time: 'Prossima apertura' },
+    ],
+    comingSoon: true,
+  },
 ]
 
 export const CONTACT_INFO = {
@@ -219,5 +232,5 @@ export const STATS = [
   { value: '2019', label: 'Fondati a Napoli' },
   { value: '< 50km', label: 'Raggio fornitori' },
   { value: '100%', label: 'Ingredienti km 0' },
-  { value: '3', label: 'Locali in Italia' },
+  { value: '4', label: 'Locali in Italia' },
 ]

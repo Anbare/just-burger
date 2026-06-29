@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react'
+import { Leaf, MapPin } from 'lucide-react'
 import { LOCATIONS } from '@/lib/site-data'
 
 export default function AppRistorantiPage() {
@@ -18,9 +18,16 @@ export default function AppRistorantiPage() {
         >
           <div className="flex items-start justify-between gap-3">
             <h2 className="font-heading font-semibold text-lg">{loc.name}</h2>
-            <span className="flex-shrink-0 rounded-full bg-sage px-3 py-1 text-[10px] font-bold text-sage-foreground">
-              Aperto
-            </span>
+            {loc.comingSoon ? (
+              <span className="flex-shrink-0 inline-flex items-center gap-1 rounded-full bg-primary/15 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary border border-primary/30">
+                Prossima Apertura
+              </span>
+            ) : (
+              <span className="flex-shrink-0 inline-flex items-center gap-1 rounded-full bg-sage px-3 py-1 text-[10px] font-bold text-sage-foreground">
+                <Leaf className="h-3 w-3" aria-hidden />
+                Aperto
+              </span>
+            )}
           </div>
 
           <div className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -30,16 +37,22 @@ export default function AppRistorantiPage() {
             </span>
           </div>
 
-          <table className="w-full text-xs">
-            <tbody>
-              {loc.hours.map((h) => (
-                <tr key={h.days}>
-                  <td className="py-0.5 text-muted-foreground">{h.days}</td>
-                  <td className="py-0.5 text-right font-semibold">{h.time}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          {loc.comingSoon ? (
+            <p className="text-xs text-muted-foreground italic">
+              Apertura prevista prossimamente
+            </p>
+          ) : (
+            <table className="w-full text-xs">
+              <tbody>
+                {loc.hours.map((h) => (
+                  <tr key={h.days}>
+                    <td className="py-0.5 text-muted-foreground">{h.days}</td>
+                    <td className="py-0.5 text-right font-semibold">{h.time}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
       ))}
     </div>
