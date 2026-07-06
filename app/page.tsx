@@ -96,8 +96,8 @@ export default function HomePage() {
               strength={36}
             >
               <DishImage
-                src="/placeholder.svg?height=960&width=760&query=ristorante%20filosofia"
-                alt="Placeholder per la sezione La nostra filosofia"
+                src="/images/La-nostra-filosofia.jpg"
+                alt="La nostra filosofia"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
