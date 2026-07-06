@@ -100,7 +100,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description:
       'Hamburger di manzo dal taglio spesso premium, funghi selvatici arrostiti, fontina e crema al tartufo.',
     price: '€16.50',
-    image: '/images/dove-tutto-ha-avuto-inizio.png',
+    image: '/images/Tartufo-e-Funghi.png',
     category: 'burger',
   },
   {

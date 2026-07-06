@@ -40,13 +40,16 @@ export default function ChiSiamoPage() {
       {/* Hero band */}
       <section className="relative flex min-h-[70svh] items-center overflow-hidden">
         <div className="absolute inset-0">
-          <DishImage
-            src="/images/kitchen-fire.jpg"
-            alt="La nostra cucina con la griglia a fuoco vivo"
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/dove-tutto-ha-avuto-inizio.png"
+          >
+            <source src="/videos/chi-siamo.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-background/75" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
         </div>
@@ -81,8 +84,8 @@ export default function ChiSiamoPage() {
               strength={34}
             >
               <DishImage
-                src="/images/chefs-portrait.jpg"
-                alt="I fondatori di Just Burger in cucina"
+                src="/images/dove-tutto-ha-avuto-inizio.png"
+                alt="La storia di Just Burger, dove tutto ha avuto inizio"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />

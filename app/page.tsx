@@ -96,8 +96,8 @@ export default function HomePage() {
               strength={36}
             >
               <DishImage
-                src="/images/dove-tutto-ha-avuto-inizio.png"
-                alt="I nostri chef preparano un burger artigianale"
+                src="/placeholder.svg?height=960&width=760&query=ristorante%20filosofia"
+                alt="Placeholder per la sezione La nostra filosofia"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
