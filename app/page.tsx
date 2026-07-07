@@ -151,7 +151,7 @@ export default function HomePage() {
         <Reveal className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-16 text-center md:px-10 md:py-24">
           <div className="pointer-events-none absolute inset-0 opacity-50">
             <DishImage
-              src="/images/cta.jpg"
+              src="/images/CTA.jpg"
               alt="CTA-finale"
               sizes="(max-width: 512px) 100vw, 50vw"
               className="object-cover"
