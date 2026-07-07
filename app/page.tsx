@@ -93,7 +93,7 @@ export default function HomePage() {
           <Reveal>
             <Parallax
               className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border"
-              strength={36}
+              strength={18}
             >
               <DishImage
                 src="/images/La-nostra-filosofia.jpg"
@@ -151,12 +151,13 @@ export default function HomePage() {
         <Reveal className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-16 text-center md:px-10 md:py-24">
           <div className="pointer-events-none absolute inset-0 opacity-50">
             <DishImage
-              src="/images/cta-bg.jpg"
-              alt=""
-              sizes="100vw"
+              src="/images/cta.jpg"
+              alt="CTA-finale"
+              sizes="(max-width: 512px) 100vw, 50vw"
               className="object-cover"
+              priority
             />
-            <div className="absolute inset-0 bg-background/80" />
+            <div className="absolute inset-0 bg-background/40" />
           </div>
           <div className="relative">
             <h2 className="mx-auto max-w-2xl font-heading text-3xl font-bold tracking-tight text-balance md:text-5xl">

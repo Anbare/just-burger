@@ -130,7 +130,14 @@ export function Parallax({
 
   return (
     <div ref={ref} className={className} style={{ overflow: 'hidden' }}>
-      <motion.div style={{ y, height: '100%', width: '100%' }}>
+      <motion.div
+        style={{
+          y,
+          height: '120%',
+          width: '100%',
+          position: 'relative',
+        }}
+      >
         {children}
       </motion.div>
     </div>
