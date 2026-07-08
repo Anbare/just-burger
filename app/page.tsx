@@ -89,19 +89,19 @@ export default function HomePage() {
 
       {/* Philosophy band with parallax image */}
       <section className="border-y border-border bg-surface/40">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 md:grid-cols-2 md:px-10 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 py-20 md:grid-cols-2 md:px-10 md:py-28">
           <Reveal>
-            <Parallax
-              className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border"
-              strength={18}
-            >
-              <DishImage
-                src="/images/La-nostra-filosofia.jpg"
-                alt="La nostra filosofia - Dedizione assoluta alla qualità del burger artigianale"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </Parallax>
+          <Parallax
+            className="relative aspect-square w-full overflow-hidden rounded-3xl border border-border"
+            strength={18}
+          >
+            <DishImage
+              src="/images/La-nostra-filosofia.jpg"
+              alt="La nostra filosofia - Dedizione assoluta alla qualità del burger artigianale"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-[center_60%] scale-[1.18]"
+            />
+          </Parallax>
           </Reveal>
 
           <div>
