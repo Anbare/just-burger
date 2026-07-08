@@ -2,6 +2,8 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Comfortaa, Montserrat } from 'next/font/google'
 import { ConditionalChrome } from '@/components/conditional-chrome'
+import { CartProvider } from '@/lib/cart-context'
+import { CartDrawer } from '@/components/cart-drawer'
 import './globals.css'
 
 const comfortaa = Comfortaa({
@@ -44,7 +46,10 @@ export default function RootLayout({
       className={`${comfortaa.variable} ${montserrat.variable} bg-background`}
     >
       <body className="font-sans antialiased bg-background text-foreground">
-        <ConditionalChrome>{children}</ConditionalChrome>
+        <CartProvider>
+          <ConditionalChrome>{children}</ConditionalChrome>
+          <CartDrawer />
+        </CartProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

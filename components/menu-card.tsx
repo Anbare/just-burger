@@ -1,10 +1,12 @@
 'use client'
 
-import { ShoppingCart } from 'lucide-react'
+import { useState } from 'react'
+import { Check, ShoppingCart } from 'lucide-react'
 import { motion } from 'motion/react'
 import type { MenuItem } from '@/lib/site-data'
 import { DishImage } from '@/components/dish-image'
 import { DishBadge } from '@/components/dish-badge'
+import { useCart } from '@/lib/cart-context'
 
 export function MenuCard({
   item,
@@ -13,6 +15,15 @@ export function MenuCard({
   item: MenuItem
   priority?: boolean
 }) {
+  const { addItem } = useCart()
+  const [added, setAdded] = useState(false)
+
+  function handleAdd() {
+    addItem(item)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 1200)
+  }
+
   return (
     <motion.article
       whileHover={{ y: -6 }}
@@ -48,10 +59,21 @@ export function MenuCard({
         </p>
         <button
           type="button"
-          className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg border border-primary/60 px-4 py-2.5 text-sm font-semibold text-primary transition-colors duration-200 hover:bg-primary hover:text-primary-foreground active:scale-[0.98]"
+          onClick={handleAdd}
+          className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg border border-primary/60 px-4 py-2.5 text-sm font-semibold text-primary transition-colors duration-200 hover:bg-primary hover:text-primary-foreground active:scale-[0.98] disabled:pointer-events-none"
+          disabled={added}
         >
-          <ShoppingCart className="h-4 w-4" />
-          Aggiungi all&apos;Ordine
+          {added ? (
+            <>
+              <Check className="h-4 w-4" />
+              Aggiunto
+            </>
+          ) : (
+            <>
+              <ShoppingCart className="h-4 w-4" />
+              Aggiungi all&apos;Ordine
+            </>
+          )}
         </button>
       </div>
     </motion.article>

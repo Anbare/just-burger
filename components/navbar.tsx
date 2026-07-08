@@ -8,6 +8,7 @@ import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import { NAV_LINKS } from '@/lib/site-data'
 import { cn } from '@/lib/utils'
+import { CartButton } from '@/components/cart-button'
 
 export function Navbar() {
   const pathname = usePathname()
@@ -79,7 +80,8 @@ export function Navbar() {
             })}
           </ul>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 md:gap-2">
+            <CartButton />
             <Link
               href="/menu"
               className="hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] md:inline-block"
