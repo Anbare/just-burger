@@ -99,7 +99,7 @@ export default function HomePage() {
               src="/images/La-nostra-filosofia.jpg"
               alt="La nostra filosofia - Dedizione assoluta alla qualità del burger artigianale"
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-[center_60%] scale-[1.18]"
+              className="object-cover object-center scale-[1.2] -translate-y-[10%]"
             />
           </Parallax>
           </Reveal>
